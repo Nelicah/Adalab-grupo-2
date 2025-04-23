@@ -1,0 +1,33 @@
+.photo-yoli {
+    border-radius: 40%;
+    margin: 0;
+    padding: 0;
+    width: 100px;
+    background-color:rgba(234, 229, 222, 0.58);
+    
+
+}
+.footer,
+.section-name {
+    background-color: rgb(220, 204, 204);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+.name,
+ .description,
+  {
+font-family: "Twinkle Star", cursive;
+font-weight: 400;
+font-style: normal;
+}
+.heart-icon {
+    font-size: 15px;
+  }
+  @media (min-width:1000px){
+    .section-name{
+        display: flex;
+        flex-direction: row;
+    }
+    
+  }
