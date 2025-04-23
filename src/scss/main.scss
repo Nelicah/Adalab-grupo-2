@@ -1,0 +1,61 @@
+.bigcontainer{
+    border-radius:5px;
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.main_image{
+    max-width: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 10px;
+    text-align: center;
+}
+
+.main_image img{
+    width: 20%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.containertext{
+    text-align: center;
+    margin-inline: 28px; 
+}
+
+.button_create{
+    font-size: 20px;
+    height: 39px;
+    border-radius: 41px;
+    background-color: greenyellow;
+    padding: 8px 1.6em 14px;
+    border-color: greenyellow;
+    border:0px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-family: "Twinkle Star";
+}
+.title{
+    font-family: "Twinkle Star";
+};
+.subtitle{
+    font-family: "Twinkle Star";
+};
+.description{
+    font-family: "Ole";
+};
+
+
+@media only screen and (min-width: 768px) {
+    .bigcontainer{
+        flex-direction: row;
+    }
+    .main_image img{
+        height: 250px;
+        width: 200px;
+    }
+}
+   
