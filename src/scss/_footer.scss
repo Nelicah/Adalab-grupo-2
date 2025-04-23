@@ -3,19 +3,21 @@
     margin: 0;
     padding: 0;
     width: 100px;
-    background-color:rgba(234, 229, 222, 0.58);
+    background-color:rgb(202, 202, 202);
     
 
 }
 .footer,
 .section-name {
-    background-color: rgb(220, 204, 204);
+    background-color:rgb(227, 227, 227);
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0;
+    width: 100%;
     }
 .name,
- .description,
+ .description
   {
 font-family: "Twinkle Star", cursive;
 font-weight: 400;
@@ -24,10 +26,10 @@ font-style: normal;
 .heart-icon {
     font-size: 15px;
   }
-  @media (min-width:1000px){
-    .section-name{
+ @media (min-width:1000px) {
+    div {
         display: flex;
         flex-direction: row;
     }
-    
-  }
+}
+        
