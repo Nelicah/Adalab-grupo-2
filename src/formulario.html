@@ -1,34 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Adalab Web Starter Kit</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./scss/main.scss" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de Cumpleaños</title>
+    <link rel="stylesheet" href="../scss/_formulario.scss" />
+    <link rel="stylesheet" href="./scss/css.scss" />
     <link rel="icon" href="./images/favicon.png" />
-  </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Ole&family=Twinkle+Star&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./scss/_formulario.scss" />
+</head>
+<body>
+    <h1>CREA TU INVITACIÓN</h1>
+    <form action="#" method="post">
+        <label for="mensaje">Mensaje:</label><br>
+        <input type="text" id="mensaje" name="mensaje" required><br><br>
 
-  <body>
-    <div class="page">
-      <load src="./partials/header.html" title="Otra página del starter kit" />
-      <main>
-        <p>
-          Esta es otra segunda página del Starter kit. Mira el fichero
-          <code class="code">./src/html/partials/main.html</code> para cómo hemos creado el enlace
-          que te ha traído hasta aquí.
-        </p>
-        <p>
-          <load
-          src="./partials/link.html"
-          aClass="link__adalab"
-          text="Volver a la página principal"
-          url="./index.html"
-        />
-        </p>
-      </main>
-      <load src="./partials/footer.html" />
-    </div>
-    <script src="./js/main.js"></script>
-  </body>
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="edad">Edad:</label><br>
+        <input type="number" id="edad" name="edad" min="0" required><br><br>
+
+        <label for="fecha">Fecha del evento:</label><br>
+        <input type="date" id="fecha" name="fecha" required><br><br>
+
+        <label for="direccion">Dirección del evento:</label><br>
+        <input type="text" id="direccion" name="direccion" required><br><br>
+
+        <label for="hora">Hora del evento:</label><br>
+        <input type="time" id="hora" name="hora" required><br><br>
+
+        <label for="email">Correo electrónico de contacto:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="telefono">Teléfono de contacto:</label><br>
+        <input type="tel" id="telefono" name="telefono" required><br><br>
+
+        <label for="tematica">Temática del evento:</label><br>
+        <select id="tematica" name="tematica" required>
+            <option value="unicornio">Unicornio</option>
+            <option value="superheroe">Superhéroe</option>
+            <option value="festivo">Festivo</option>
+        </select><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
 </html>
+<script src="../js/formulario.js"></script>
