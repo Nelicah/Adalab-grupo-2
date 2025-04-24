@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.page_header {
+  background-color: #abc2d1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3px;
+}
+
+.logo {
+  width: 100px;
+  border-radius: 20px;
+}
+
+.menu {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 4px;
+}
+
+.menu_overview {
+  background-color: white;
+  padding: 10px;
+  width: 50vw;
+  height: 25vh;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+  border: solid 2px #c5c490;
+}
+
+.hidden {
+  display: none;
+}
+
+.titles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title_company {
+  font-size: 1.563em;
+  font-family: "Twinkle Star", cursive;
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.links_header {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  text-decoration: underline overline #c5c490;
+}
+
+.form_link,
+.contact_link {
+  text-decoration: none;
+  color: black;
+}
+
+.close_window {
+  position: absolute;
+  bottom: 10px;
+  width: 25px;
+}
