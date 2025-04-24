@@ -3,10 +3,51 @@
    
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-body {
-    background-image: url("../../public/images/background.jpg");
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-size: cover; /* Hace que la imagen cubra todo el body */
-    background-position: center; /* Centra la imagen */
+html, body {
+    margin: 0;
+    padding: 0;
     width: 100%;
-    height: 100vh;}
+    min-height: 100%;
+  }
+  
+  body {
+    body {
+        background-image: url("../../public/images/background.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+      
+    
+  }
+  
+  
+    label {
+        font-family: "Twinkle Star", cursive;
+    font-weight: 400;
+    font-style: normal;
+    }
+    .cris {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start; // Opcional: o "center"
+        justify-content: center;
+        gap: 2rem;
+        padding: 2rem;
+        flex-wrap: wrap; // Por si el espacio es pequeño en pantallas chicas
+      }
+      
+      
+      
+      .homergiff {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .homer {
+        border-radius: 10px;
+      }
+      
+      
