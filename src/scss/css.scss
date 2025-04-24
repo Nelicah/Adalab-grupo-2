@@ -1,7 +1,6 @@
-@use "./header.scss"; 
-@use "./main.scss";
-@use "./footer.scss";
-@use "./formulario.scss";
+@use "./_header.scss"; 
+@use "./_main.scss";
+@use "./_footer.scss";
 
 .twinkle-star-regular {
     font-family: "Twinkle Star", cursive;
@@ -13,9 +12,8 @@
     font-weight: 400;
     font-style: normal;
   }
+  body{
+    margin: 0px;
+  }
 
-body{
-  background-image: url(../images/background.jpg);
-  background-position: top;
-  background-size: contain;
-}
+
