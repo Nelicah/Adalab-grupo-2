@@ -2,6 +2,17 @@
 <html lang="es">
 
 <head>
+<<<<<<< HEAD
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulario de Cumpleaños</title>
+  <link rel="stylesheet" href="../scss/_formulario.scss" />
+  <link rel="stylesheet" href="./scss/css.scss" />
+  <link rel="icon" href="./images/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Ole&family=Twinkle+Star&display=swap" rel="stylesheet" />
+=======
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulario de Cumpleaños</title>
@@ -12,11 +23,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Ole&family=Twinkle+Star&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./scss/formulario.scss" />
+>>>>>>> e61d0dd87a20ca10f648205e63159f94df8612d8
 </head>
 
 <body>
-    <h1>CREA TU INVITACIÓN</h1>
-    <form action="#" method="post">
+  <section class="cris">
+    <!-- Contenedor del formulario -->
+    <div class="formulariopart">
+      <h1>CREA TU INVITACIÓN</h1>
+      <form action="#" method="post">
         <label for="mensaje">Mensaje:</label><br>
         <input type="text" id="mensaje" name="mensaje" required><br><br>
 
@@ -43,14 +58,30 @@
 
         <label for="tematica">Temática del evento:</label><br>
         <select id="tematica" name="tematica" required>
-            <option value="unicornio">Unicornio</option>
-            <option value="superheroe">Superhéroe</option>
-            <option value="festivo">Festivo</option>
+          <option value="unicornio">Unicornio</option>
+          <option value="superheroe">Superhéroe</option>
+          <option value="festivo">Festivo</option>
         </select><br><br>
 
         <button type="submit">Enviar</button>
-    </form>
+      </form>
+    </div>
+
+    <!-- Contenedor del GIF -->
+    <div class="homergiff">
+      <img src="https://c.tenor.com/XfLV1PmF88oAAAAC/homer-simpson-the-simpsons.gif" 
+           alt="Homer Simpson bailando" 
+           width="70" 
+           height="70" 
+           class="homer" />
+    </div>
+  </section>
+
+  <script src="../js/formulario.js"></script>
 </body>
 
 </html>
+<<<<<<< HEAD
+=======
 <script src="../js/formulario.js"></script>
+>>>>>>> e61d0dd87a20ca10f648205e63159f94df8612d8
