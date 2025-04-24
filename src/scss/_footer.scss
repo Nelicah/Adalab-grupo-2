@@ -1,12 +1,15 @@
 .photo-yoli {
     margin-top: 3rem;
     border-radius: 40%;
-    
     padding: 0;
     width: 100px;
     background-color:rgb(155, 180, 188);
-    
-
+}
+.photo-cande {
+    margin-top: 3rem;
+    border-radius: 40%;
+    padding: 0;
+    width: 100px;
 }
 .footer,
 .section-name {
@@ -22,8 +25,7 @@
     flex-direction: column;
     align-items: center;
   }
-
-.name,
+ .name,
  .description
   {
 font-family: "Twinkle Star", cursive;
@@ -56,16 +58,12 @@ margin-top: 0;
 .photo-cris{
     margin-top: 3rem;
     border-radius: 40%;
-    
     padding: 0;
     width: 100px;
     background-color:rgb(155, 180, 188);
 }
-
-
 .info {
     margin-top: 50px;
-
 }
 .name {
     font-size: 40px;
