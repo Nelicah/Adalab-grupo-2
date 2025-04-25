@@ -4,11 +4,12 @@ main{
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
+    margin-bottom: 40px;
   }
 .bigcontainer{
     border-radius:5px;
     display: flex;
-    background-color: white;
+    background-color: whitesmoke;
     flex-direction: column;
     margin: 0 auto;
     width: 80%;
@@ -25,7 +26,7 @@ main{
 
 
 .main_image img{
-    width: 20%;
+    width: 30%;
     height: auto;
     border-radius: 10px;
 }
