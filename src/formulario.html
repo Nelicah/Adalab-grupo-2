@@ -18,42 +18,44 @@
 
     <!-- Contenedor formulario + tarjeta -->
     <div class="form-container">
+      
       <!-- Formulario -->
       <div class="formulariopart">
         <h1>CREA TU INVITACIÓN</h1>
         <form id="formulario" action="#" method="post">
+          
           <label for="mensaje">Mensaje:</label><br>
-          <input type="text" id="mensaje" name="mensaje" required><br><br>
+          <input type="text" class="js-mensaje" id="mensaje" name="mensaje" required><br><br>
 
           <label for="nombre">Nombre:</label><br>
-          <input type="text" id="nombre" name="nombre" required><br><br>
+          <input type="text" class="js-nombre" id="nombre" name="nombre" required><br><br>
 
           <label for="edad">Edad:</label><br>
-          <input type="number" id="edad" name="edad" min="0" required><br><br>
+          <input type="number" class="js-edad" id="edad" name="edad" min="0" required><br><br>
 
           <label for="fecha">Fecha del evento:</label><br>
-          <input type="date" id="fecha" name="fecha" required><br><br>
+          <input type="date" class="js-fecha" id="fecha" name="fecha" required><br><br>
 
           <label for="direccion">Dirección del evento:</label><br>
-          <input type="text" id="direccion" name="direccion" required><br><br>
+          <input type="text" class="js-direccion" id="direccion" name="direccion" required><br><br>
 
           <label for="hora">Hora del evento:</label><br>
-          <input type="time" id="hora" name="hora" required><br><br>
+          <input type="time" class="js-hora" id="hora" name="hora" required><br><br>
 
           <label for="email">Correo electrónico de contacto:</label><br>
-          <input type="email" id="email" name="email" required><br><br>
+          <input type="email" class="js-email" id="email" name="email" required><br><br>
 
           <label for="telefono">Teléfono de contacto:</label><br>
-          <input type="tel" id="telefono" name="telefono" required><br><br>
+          <input type="tel" class="js-telefono" id="telefono" name="telefono" required><br><br>
 
           <label for="tematica">Temática del evento:</label><br>
-          <select id="tematica" name="tematica" required>
+          <select id="tematica" class="js-tematica" name="tematica" required>
             <option value="unicornio">Unicornio</option>
             <option value="superheroe">Superhéroe</option>
             <option value="festivo">Festivo</option>
           </select><br><br>
 
-          <button type="submit">Enviar</button>
+          <button type="submit" class="js-boton">Enviar</button>
         </form>
       </div>
 
