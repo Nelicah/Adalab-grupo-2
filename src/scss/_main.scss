@@ -2,7 +2,8 @@
 main{
     /*background-image: url(../images/background.jpg);*/
     background-position: top;
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 .bigcontainer{
     border-radius:5px;
@@ -11,6 +12,7 @@ main{
     flex-direction: column;
     margin: 0 auto;
     width: 80%;
+    padding: 50px 0px 50px 0px;
 }
 
 .main_image{
@@ -31,6 +33,7 @@ main{
 .containertext{
     text-align: center;
     margin-inline: 28px; 
+    padding: 10px;
 }
 
 .button_create{
@@ -50,6 +53,7 @@ main{
 };
 .subtitle{
     font-family: "Twinkle Star";
+    padding-bottom: 15px;
 };
 .description{
     font-family: "Ole";
