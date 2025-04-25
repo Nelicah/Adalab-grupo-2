@@ -1,80 +1,98 @@
 .photo-yoli {
-    margin-top: 3rem;
-    border-radius: 40%;
-    padding: 0;
-    width: 50px;
-    background-color:rgb(155, 180, 188);
+  margin-top: 3rem;
+  border-radius: 40%;
+  padding: 0;
+  width: 50px;
+  background-color: rgb(155, 180, 188);
 }
 .photo-cande {
-    margin-top: 3rem;
-    border-radius: 40%;
-    padding: 0;
-    width: 50px;
+  margin-top: 3rem;
+  border-radius: 40%;
+  padding: 0;
+  width: 50px;
 }
 .footer,
 .section-name {
-    background-color:rgb(228, 243, 250);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 20px;
-  }
-  .first-team,
-  .two-team {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
- .name,
- .description
-  {
-font-family: "Twinkle Star", cursive;
-font-weight: 400;
-font-style: normal;
-margin-top: 0;
+  background-color: rgb(228, 243, 250);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
 }
-@keyframes latidos {
-    from { transform: none;}
-    50% { transform: scale(1.4);}
-    to { transform: none;}
-}
-.heart-icon {
-    display: inline-block;
-    font-size: 14px;
-    text-shadow: 0 0 10px #222, 1px 1px 0 #450505;
-    color: rgb(84, 100, 109);
-    animation: latidos 2s infinite;
-    transform-origin: center;
-  }
- @media (min-width:1000px) {
-    .section-name {
-        display: flex;
-        flex-direction: row;
-        gap: 50px;
-        margin-left: 100px;
-        justify-content: center;
-    }
-}
-.photo-cris{
-    margin-top: 3rem;
-    border-radius: 40%;
-    padding: 0;
-    width: 50px;
-    
-}
-.info {
-    margin-top: 50px;
+.first-team,
+.two-team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .name {
+  font-family: "Twinkle Star", cursive;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 0;
+}
+@keyframes latidos {
+  from {
+    transform: none;
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  to {
+    transform: none;
+  }
+}
+.heart-icon {
+  display: inline-block;
+  font-size: 14px;
+  text-shadow: 0 0 10px #222, 1px 1px 0 #450505;
+  color: rgb(84, 100, 109);
+  animation: latidos 2s infinite;
+  transform-origin: center;
+}
+
+.photo-cris {
+  margin-top: 3rem;
+  border-radius: 40%;
+  padding: 0;
+  width: 50px;
+}
+.info {
+  margin-top: 50px;
+}
+.name {
+  font-size: 20px;
+}
+.description,
+.roles,
+.name {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+.description {
+  font-size: 10px;
+  font-family: fantasy;
+}
+.roles {
+  font-size: 15px;
+  font-family: fantasy;
+}
+
+@media (min-width: 1000px) {
+  .section-name {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin-left: 100px;
+    justify-content: center;
+  }
+  .name {
+    font-size: 50px;
+  }
+  .roles {
     font-size: 20px;
-}
-.description, .roles, .name {
-    margin-left: 15%;
-    margin-right: 15%;
-}
-.description{
-    font-size: 10px;
-}
-.roles{
+  }
+  .description {
     font-size: 15px;
+  }
 }
