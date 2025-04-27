@@ -38,16 +38,19 @@ main{
 }
 
 .button_create{
-    font-size: 20px;
-    height: 39px;
-    border-radius: 41px;
-    background-color: greenyellow;
-    padding: 8px 1.6em 14px;
-    border-color: greenyellow;
-    border:0px;
     margin-bottom: 30px;
-    margin-top: 30px;
-    font-family: "Twinkle Star";
+    margin-top: 50px;
+    width: 100%;
+    a{
+        font-size: 20px;
+        border-radius: 41px;
+        background-color: greenyellow;
+        font-family: "Twinkle Star";
+        padding: 8px 1.6em 14px;
+        border-color: greenyellow;
+        border:0px;
+        text-decoration: none;
+    }
 }
 .title{
     font-family: "Twinkle Star";
@@ -64,6 +67,7 @@ main{
 @media only screen and (min-width: 768px) {
     .bigcontainer{
         flex-direction: row;
+        padding: 12% 0px 12% 0px;
     }
     .main_image img{
         height: 250px;
