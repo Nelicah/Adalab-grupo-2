@@ -74,3 +74,95 @@ header{
   bottom: 10px;
   width: 25px;
 }
+
+.links_desktop {
+  display: none;
+}
+
+.welcome_text {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .menu {
+    display: none;
+  }
+  .logo {
+    width: 80px;
+    margin: 5px;
+  }
+  .content_header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .links_desktop {
+    display: flex;
+    gap: 40px;
+    padding-right: 90px;
+    padding-top: 40px;
+  }
+
+  .form_link-desktop,
+  .contact_link-desktop {
+    color: black;
+  }
+}
+
+@media (min-width: 1024px) {
+  .links_desktop {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+    padding-right: 80px;
+    padding-top: 30px;
+  }
+
+  .welcome_text {
+    display: inline;
+    font-size: 3.125em;
+    padding-top: 40px;
+  }
+  @keyframes slide {
+    0% {
+      transform: translateX(500px);
+    }
+    40% {
+      transform: translateX(200px);
+    }
+    60% {
+      transform: translateX(150px);
+    }
+    80% {
+      transform: translateX(75px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+  .letra_W,
+  .letra_M {
+    color: #e12021;
+    display: inline-block;
+    animation: slide 5s;
+  }
+  .letra_E {
+    color: #83db26;
+    display: inline-block;
+    animation: slide 7s;
+  }
+  .letra_L {
+    color: #edc139;
+    display: inline-block;
+    animation: slide 8s;
+  }
+  .letra_C {
+    color: #1f708f;
+    display: inline-block;
+    animation: slide 9s;
+  }
+  .letra_O {
+    color: #dc5602;
+    display: inline-block;
+    animation: slide 9s;
+  }
+}
