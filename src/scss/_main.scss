@@ -1,6 +1,6 @@
 
 main{
-    /*background-image: url(../images/background.jpg);*/
+    background-image: url(../images/background.jpg);
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
@@ -9,7 +9,7 @@ main{
 .bigcontainer{
     border-radius:5px;
     display: flex;
-    background-color: whitesmoke;
+    /*background-color: whitesmoke;*/
     flex-direction: column;
     margin: 0 auto;
     width: 80%;
