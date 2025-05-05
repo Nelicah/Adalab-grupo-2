@@ -83,3 +83,23 @@ botonReset.addEventListener("click", () => {
 
 // Ejecutar al iniciar para precargar
 updatePreview();
+
+// llamamos a los estilos
+const unicornioSelect = document.querySelector('.js_unicornio');
+
+const superheroeSelect = document.querySelector('.js_superheroe');
+
+const festivoSelect = document.querySelector('.js_festivo');
+
+const tarjetDiv = document.querySelector('.tarjet');
+const tematicaSelect = document.querySelector('.js-tematica');
+
+tematicaSelect.addEventListener("change", (ev) => {
+  ev.preventDefault();
+  const classToPut = tematicaSelect.value;
+  console.log(classToPut);
+  
+  tarjetDiv.classList.remove('tarjet', 'superheroe', 'festivo', 'unicornio');
+  tarjetDiv.classList.add(classToPut);
+});
+

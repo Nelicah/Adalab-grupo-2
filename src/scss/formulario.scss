@@ -65,6 +65,45 @@ label {
   height: 80%;
 }
 
+.unicornio {
+  background-image: url("../images/unicornio1.jpg");
+  background-size: cover;
+  background-size: 100% 100%;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  height: 80%;
+}
+
+.superheroe {
+  background-image: url("../images/superheroe1.jpg");
+  background-size: cover;
+  background-size: 100% 100%;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  height: 80%;
+}
+
+.festivo {
+  background-image: url("../images/festivo1.jpg");
+  background-size: cover;
+  background-size: 100% 100%;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  height: 80%;
+}
+
 /* Formulario */
 .formulariopart {
   background-color: rgba(255, 255, 255, 0.9);
