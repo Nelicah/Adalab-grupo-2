@@ -77,6 +77,9 @@ botonReset.addEventListener("click", () => {
   pEmail.textContent = "";
   pTelefono.textContent = "";
 
+  tarjetDiv.classList.remove( 'superheroe', 'festivo', 'unicornio');
+  tarjetDiv.classList.add('tarjet');
+
   // Mostrar a Homer de nuevo
   homer.style.display = "block";
 });
@@ -102,4 +105,5 @@ tematicaSelect.addEventListener("change", (ev) => {
   tarjetDiv.classList.remove('tarjet', 'superheroe', 'festivo', 'unicornio');
   tarjetDiv.classList.add(classToPut);
 });
+
 
