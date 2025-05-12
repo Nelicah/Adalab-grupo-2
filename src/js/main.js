@@ -59,6 +59,34 @@ campos.forEach((campo) => {
 boton.addEventListener("click", (event) => {
   event.preventDefault();
   homer.style.display = "none";
+
+  const info = {
+    "field1": tematicaSelect.value,
+    "field2": mensaje.value,
+    "field3": fecha.value,
+    "field4": direccion.value,
+    "field5": hora.value,
+    "field6": email.value,
+    "field7": telefono.value,
+    "photo": "https://images.app.goo.gl/MGNvD4aT75Cw11K6A"
+  };
+  console.log (mensaje.value);
+  alert('Enviando información...')
+
+  // ENVIAR INFO
+
+  fetch('https://dev.adalab.es/api/info/data',
+    {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(info)
+    }
+)
+  .then(res => res.json() )
+  .then( data => {
+    console.log(data);
+  })
+
 });
 
 // Resetear formulario y tarjeta
@@ -82,6 +110,7 @@ botonReset.addEventListener("click", () => {
 
   // Mostrar a Homer de nuevo
   homer.style.display = "block";
+
 });
 
 // Ejecutar al iniciar para precargar
