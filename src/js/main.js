@@ -61,32 +61,30 @@ boton.addEventListener("click", (event) => {
   homer.style.display = "none";
 
   const info = {
-    "field1": tematicaSelect.value,
-    "field2": mensaje.value,
-    "field3": fecha.value,
-    "field4": direccion.value,
-    "field5": hora.value,
-    "field6": email.value,
-    "field7": telefono.value,
-    "photo": "https://images.app.goo.gl/MGNvD4aT75Cw11K6A"
+    field1: parseInt(edad.value), //este tiene valor numerico
+    field2: mensaje.value,
+    field3: fecha.value,
+    field4: direccion.value,
+    field5: hora.value,
+    field6: email.value,
+    field7: telefono.value,
+    field8: tematicaSelect.value,
+    photo: "No hay fotos",
   };
-  console.log (mensaje.value);
-  alert('Enviando información...')
+  console.log(mensaje.value);
+  alert("Enviando información...");
 
   // ENVIAR INFO
 
-  fetch('https://dev.adalab.es/api/info/data',
-    {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify(info)
-    }
-)
-  .then(res => res.json() )
-  .then( data => {
-    console.log(data);
+  fetch("https://dev.adalab.es/api/info/data", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(info),
   })
-
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+    });
 });
 
 // Resetear formulario y tarjeta
@@ -105,34 +103,31 @@ botonReset.addEventListener("click", () => {
   pEmail.textContent = "";
   pTelefono.textContent = "";
 
-  tarjetDiv.classList.remove( 'superheroe', 'festivo', 'unicornio');
-  tarjetDiv.classList.add('tarjet');
+  tarjetDiv.classList.remove("superheroe", "festivo", "unicornio");
+  tarjetDiv.classList.add("tarjet");
 
   // Mostrar a Homer de nuevo
   homer.style.display = "block";
-
 });
 
 // Ejecutar al iniciar para precargar
 updatePreview();
 
 // llamamos a los estilos
-const unicornioSelect = document.querySelector('.js_unicornio');
+const unicornioSelect = document.querySelector(".js_unicornio");
 
-const superheroeSelect = document.querySelector('.js_superheroe');
+const superheroeSelect = document.querySelector(".js_superheroe");
 
-const festivoSelect = document.querySelector('.js_festivo');
+const festivoSelect = document.querySelector(".js_festivo");
 
-const tarjetDiv = document.querySelector('.tarjet');
-const tematicaSelect = document.querySelector('.js-tematica');
+const tarjetDiv = document.querySelector(".tarjet");
+const tematicaSelect = document.querySelector(".js-tematica");
 
 tematicaSelect.addEventListener("change", (ev) => {
   ev.preventDefault();
   const classToPut = tematicaSelect.value;
   console.log(classToPut);
-  
-  tarjetDiv.classList.remove('tarjet', 'superheroe', 'festivo', 'unicornio');
+
+  tarjetDiv.classList.remove("tarjet", "superheroe", "festivo", "unicornio");
   tarjetDiv.classList.add(classToPut);
 });
-
-
