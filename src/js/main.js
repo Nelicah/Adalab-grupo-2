@@ -84,6 +84,18 @@ boton.addEventListener("click", (event) => {
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
+      if (data.success === false) {
+        alert(
+          "No se ha podido guardar la información porque faltan datos por rellenar."
+        );
+      } else {
+        alert(
+          "Se ha guardado la información de tu tarjeta. Ya tienes disponible el enlace para descargarla"
+        );
+        const enlace = document.querySelector(".js-enlace");
+        enlace.innerHTML += `<a href="https://dev.adalab.es/api/info/${data.infoID}" > https://dev.adalab.es/api/info/${data.infoID} </a>`;
+        console.log(enlace);
+      }
     });
 });
 
