@@ -26,6 +26,8 @@ const email = document.querySelector(".js-email");
 const telefono = document.querySelector(".js-telefono");
 const boton = document.querySelector(".js-boton");
 const homer = document.querySelector(".homer");
+const alertParrafo = document.querySelector(".alert");
+const tematicaSelect = document.querySelector(".js-tematica");
 
 // Elementos del preview
 const pMensaje = document.querySelector(".pmessage");
@@ -55,13 +57,15 @@ campos.forEach((campo) => {
   campo.addEventListener("input", updatePreview);
 });
 
-// Ocultar a Homer al enviar
+// Al hacer clic en enviar
 boton.addEventListener("click", (event) => {
   event.preventDefault();
   homer.style.display = "none";
 
+  alertParrafo.innerHTML = "Enviando información...";
+
   const info = {
-    field1: parseInt(edad.value), //este tiene valor numerico
+    field1: parseInt(edad.value), // este tiene valor numérico
     field2: mensaje.value,
     field3: fecha.value,
     field4: direccion.value,
@@ -71,11 +75,10 @@ boton.addEventListener("click", (event) => {
     field8: tematicaSelect.value,
     photo: "No hay fotos",
   };
-  console.log(mensaje.value);
-  alert("Enviando información...");
+
+  console.log("Mensaje:", mensaje.value);
 
   // ENVIAR INFO
-
   fetch("https://dev.adalab.es/api/info/data", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -84,62 +87,15 @@ boton.addEventListener("click", (event) => {
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
+
       if (data.success === false) {
-        alert(
-          "No se ha podido guardar la información porque faltan datos por rellenar."
-        );
+        alertParrafo.innerHTML = "No se ha podido guardar la información porque faltan datos por rellenar.";
       } else {
-        alert(
-          "Se ha guardado la información de tu tarjeta. Ya tienes disponible el enlace para descargarla"
-        );
+        alertParrafo.innerHTML = "Se ha guardado la información de tu tarjeta. Ya tienes disponible el enlace para descargarla.";
+
         const enlace = document.querySelector(".js-enlace");
-        enlace.innerHTML += `<a href="https://dev.adalab.es/api/info/${data.infoID}" > https://dev.adalab.es/api/info/${data.infoID} </a>`;
+        enlace.innerHTML = `<a href="https://dev.adalab.es/api/info/${data.infoID}" target="_blank">https://dev.adalab.es/api/info/${data.infoID}</a>`;
         console.log(enlace);
       }
     });
-});
-
-// Resetear formulario y tarjeta
-const botonReset = document.querySelector(".reset");
-const formulario = document.querySelector("#formulario");
-
-botonReset.addEventListener("click", () => {
-  formulario.reset();
-  // Limpiar tarjeta
-  pMensaje.textContent = "";
-  pNombre.textContent = "";
-  pEdad.textContent = "";
-  pFecha.textContent = "";
-  pDireccion.textContent = "";
-  pHora.textContent = "";
-  pEmail.textContent = "";
-  pTelefono.textContent = "";
-
-  tarjetDiv.classList.remove("superheroe", "festivo", "unicornio");
-  tarjetDiv.classList.add("tarjet");
-
-  // Mostrar a Homer de nuevo
-  homer.style.display = "block";
-});
-
-// Ejecutar al iniciar para precargar
-updatePreview();
-
-// llamamos a los estilos
-const unicornioSelect = document.querySelector(".js_unicornio");
-
-const superheroeSelect = document.querySelector(".js_superheroe");
-
-const festivoSelect = document.querySelector(".js_festivo");
-
-const tarjetDiv = document.querySelector(".tarjet");
-const tematicaSelect = document.querySelector(".js-tematica");
-
-tematicaSelect.addEventListener("change", (ev) => {
-  ev.preventDefault();
-  const classToPut = tematicaSelect.value;
-  console.log(classToPut);
-
-  tarjetDiv.classList.remove("tarjet", "superheroe", "festivo", "unicornio");
-  tarjetDiv.classList.add(classToPut);
 });
