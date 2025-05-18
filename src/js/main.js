@@ -99,3 +99,29 @@ boton.addEventListener("click", (event) => {
       }
     });
 });
+// Referencia a la tarjeta
+const tarjeta = document.querySelector(".tarjet");
+
+// Función para actualizar la clase de temática
+function actualizarTematica() {
+  // Remueve todas las clases posibles de temática
+  tarjeta.classList.remove("unicornio", "superheroe", "festivo");
+
+  // Obtiene la temática seleccionada
+  const valorSeleccionado = tematicaSelect.value;
+
+  // Añade la clase correspondiente
+  if (valorSeleccionado === "unicornio") {
+    tarjeta.classList.add("unicornio");
+  } else if (valorSeleccionado === "superheroe") {
+    tarjeta.classList.add("superheroe");
+  } else if (valorSeleccionado === "festivo") {
+    tarjeta.classList.add("festivo");
+  }
+}
+
+// Asigna el evento change al <select>
+tematicaSelect.addEventListener("change", actualizarTematica);
+
+
+
