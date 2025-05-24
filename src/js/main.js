@@ -89,9 +89,11 @@ boton.addEventListener("click", (event) => {
       console.log(data);
 
       if (data.success === false) {
-        alertParrafo.innerHTML = "No se ha podido guardar la información porque faltan datos por rellenar.";
+        alertParrafo.innerHTML =
+          "No se ha podido guardar la información porque faltan datos por rellenar.";
       } else {
-        alertParrafo.innerHTML = "Se ha guardado la información de tu tarjeta. Ya tienes disponible el enlace para descargarla.";
+        alertParrafo.innerHTML =
+          "Se ha guardado la información de tu tarjeta. Ya tienes disponible el enlace para descargarla.";
 
         const enlace = document.querySelector(".js-enlace");
         enlace.innerHTML = `<a href="https://dev.adalab.es/api/info/${data.infoID}" target="_blank">https://dev.adalab.es/api/info/${data.infoID}</a>`;
@@ -123,5 +125,11 @@ function actualizarTematica() {
 // Asigna el evento change al <select>
 tematicaSelect.addEventListener("change", actualizarTematica);
 
+// función botón reset
+const resetButton = document.querySelector(".js_resetButton");
 
+function handleClickResetBtn() {
+  location.reload();
+}
 
+resetButton.addEventListener("click", handleClickResetBtn);
