@@ -1,13 +1,5 @@
 "use strict";
 
-import { createConfetti } from "./confetti.js";
-
-createConfetti();
-
-import "../scss/header-formulario.scss";
-
-console.log(">> Ready :)");
-
 // Menú hamburguesa
 const menuHamburguer = document.querySelector(".menu");
 const menuDisplay = document.querySelector(".menu_overview");
