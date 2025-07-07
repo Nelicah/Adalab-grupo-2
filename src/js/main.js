@@ -1,5 +1,11 @@
 "use strict";
 
+import { createConfetti } from "./confetti.js";
+
+createConfetti();
+
+import "../scss/header-formulario.scss";
+
 console.log(">> Ready :)");
 
 // Menú hamburguesa

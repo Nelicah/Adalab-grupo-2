@@ -1,4 +1,4 @@
-function createConfetti() {
+export function createConfetti() {
   const container = document.getElementById("confetti-container");
   const colors = ["#e12021", "#83db26", "#edc139", "#1f708f", "#dc5602"];
 
